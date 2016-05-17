@@ -20,7 +20,7 @@ function ListNotes(){
 function get(note_id){
 	len = notes_id.length;
 	for (var i in len){
-		if (note_id == notes_id[i]){
+		if (note_id[i] == notes_id){
 		    console.log(notes_content[i]);
 	    }
 	}
@@ -36,11 +36,16 @@ function search(search_text){
 function delet(note_id){
 	len = note_content.length;
 	for (var i in len){
-		if (note_id == notes_id[i]){
-            note_content[i].delete;
+		if (note_id[i] == notes_id){
+            note_content[i] = note_content[i].delete;
 		}
     }
 }
 function edit(note_id, new_content){
-	
+	len = note_content.length;
+	for (var i in len){
+		if (note_id[i] == notes_id){
+            note_content[i] = new_content;
+		}
+    }
 }
